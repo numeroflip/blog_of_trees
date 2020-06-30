@@ -1,0 +1,94 @@
+root,
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* MOBILE FIRST */
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Layout */
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 70px 1fr 200px;
+    grid-template-areas: 
+        "hr"
+        "mn"
+        "fr";
+    line-height: 1.5;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", serif;
+}
+
+/* Header */
+.top-bar {
+    color: whitesmoke;
+    background-color: #161616;
+    grid-area: hr;
+}
+
+.navigation_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main */
+main {
+    grid-area: mn;
+    position: relative;
+}
+
+.post-card {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: rgb(41, 41, 41);
+    min-height: 200px;
+}
+
+.card-figure {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.card-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+}
+
+/* Footer */
+footer {
+    color: whitesmoke;
+    background-color: #161616;
+    grid-area: fr;
+}
