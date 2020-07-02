@@ -19,10 +19,11 @@ html {
 body {
     /* Layout */
     display: grid;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1160px;
     grid-template-columns: 1fr ;
-    grid-template-rows: 70px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
         "hr"
         "mn"
@@ -45,15 +46,29 @@ h6,
 /* Header */
 .top-bar {
     color: rgb(34, 34, 34);
-/*     background-color: #ffffff;
- */    grid-area: hr;
+    grid-area: hr;
+    padding: 0.2rem 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: .3rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
 }
 
+.logo {
+    grid-column: 2/3;
+    font-size: 1.5rem;
+    border-bottom: 2px solid rgb(7, 83, 36);
+    border-radius: 2px;
+    padding: .2rem 1rem;
+
+}
 .navigation_wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-self: end;
+    grid-column: 3/4;
 }
+
 
 /* Main */
 main {
@@ -61,56 +76,145 @@ main {
     position: relative;
 }
 
-/* HEADER */
-
-.logo {
-    font-size: 1.5rem;
+/* ----------------------POSTS---------------- */
+.post-cards-section {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-/* POST-CARD */
+.category-header {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    grid-column: 1/-1;
+    justify-self: start;
+    align-self: center;
+    margin-bottom: -1.8rem;
+    color: rgb(183, 204, 181);
+}
+.category-header:before,
+.category-header:after {
+    content: "///"
+}
+
 .post-card {
     background-color: #fff;
     box-shadow: 0 0 10px 1px rgba(75, 74, 74, 0.192);
     border-radius: 1rem;
     overflow: hidden;
-    margin: 2rem 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     color: rgb(41, 41, 41);
     min-height: 200px;
+    height: 100%;
+    min-width: 300px;
+    position: relative;
+}
+
+.post-card:hover {
+    box-shadow: 0 4px 15px 2px rgba(75, 74, 74, 0.281);
+}
+
+.new::after {
+    color: white;
+    content: "New";
+    padding: .2rem 2rem;
+    background-color: rgb(211, 72, 72);
+    position: absolute;
+    top: -30px;
+    left: -10px;
+
 }
 
 .card-text-wrapper {
     padding: 1.3rem;
+    position: relative;
 }
-.card-text-wrapper a:hover {
-    color: rgb(12, 126, 1);
-}
+
 .post-header {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    position: relative;
 }
+
+.post-header:before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color: rgb(5, 170, 5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all .3s;
+}
+
+.post-card:hover .post-header:before {
+    width: 20%;
+}
+
 
 .card-figure {
     display: flex;
     justify-content: center;
-    max-width: 100%;
+    width: 100%;
     margin: 0;
     position: relative;
-    max-height: 300px;
-    max-height: 50vw;
-    overflow: hidden;
+    height: 300px;
 }
 
 .card-img {
     object-fit: cover;
     max-height: auto;
     max-width: 100%;
+    transition: all 1s;
 }
+
+.link-button {
+    font-size: 1.3rem;
+    grid-column: 1/-1;
+    justify-self: center;
+    font-weight: 300;
+    font-family: "Playfair Display", serif;
+    padding: 0 .8rem;
+    border-radius: 100px;
+    position: relative;
+    z-index: 2;
+    padding-bottom: .1rem;
+}
+
+.link-button:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: all .3s;
+    z-index: -2;
+}
+
+.link-button:hover:before {
+    width: 100%;
+}
+
+.link-button:hover {
+    color: white;
+}
+/* --------------------- TAGS --------------------------- */
+/* -------------------- ABOUT ME ------------------------ */
+/* -------------------- SUBSCRIBE ------------------------ */
 
 /* Footer */
 footer {
-    color: whitesmoke;
-    background-color: #161616;
+    margin-top: 2rem;
+    border-top: 1px solid black;
     grid-area: fr;
+}
+
+@media (min-width: 960px) {
+
 }
