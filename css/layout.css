@@ -1,0 +1,13 @@
+body {
+    /* Layout */
+    display: grid;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1160px;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "hr"
+        "mn"
+        "fr";
+}

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=>, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;800&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>Blog of Trees</title>
 </head>
@@ -13,26 +14,49 @@
     <header class="header top-bar">
             <a class="logo" href="./index.html">Blog of Trees</a>
         <nav class="navigation_wrapper">
-            <a href="#" class="subscribe">Subscribe</a>
+            <a href="#subscribe" class="subscribe">Subscribe</a>
         </nav>
     </header>
 <!------------------------------- MAIN -------------------------------------->
     <main class="main">
-        <!-- --------------------- POSTS ------------------- -->
+        <!-- --------------------- POSTS CARDS ------------------- -->
         <section class="post-cards-section">
             <h2 class="category-header"><strong>Latest Posts</strong></h2>
             <article class="post-card">
                 <a href="#" class="post-card-link link">
                     <figure class="card-figure">
-                        <img src="./img/Mulberry.jpg" alt="Paper mulberry leafs" class="card-img">
+                        <img src="./img/forest.jpg" alt="forest" class="card-img">
                     </figure>
                     <header class="card-text-wrapper new">
+                        <h3 class="post-header">Forest Bathing</h3>
+                        <p class="post-describe"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident delectus animi dolores, exercitationem voluptates est eveniet.</p>                
+                    </header>
+                </a>
+            </article>
+
+            <article class="post-card">
+                <a href="#" class="post-card-link link">
+                    <figure class="card-figure">
+                        <img src="./img/bonsai.jpg" alt="A bonsai tree on a table" class="card-img">
+                    </figure>
+                    <header class="card-text-wrapper">
+                       <h3 class="post-header">What about a bonsai?</h3>
+                        <p class="post-describe"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident delectus animi dolores, exercitationem voluptates est eveniet.</p>                
+                    </header>
+                </a>
+            </article>
+            <article class="post-card">
+                <a href="#" class="post-card-link link">
+                    <figure class="card-figure">
+                        <img src="./img/Mulberry.jpg" alt="Paper mulberry leafs" class="card-img">
+                    </figure>
+                    <header class="card-text-wrapper">
                         <h3 class="post-header">Paper Mulberry</h3>
                         <p class="post-describe"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident delectus.</p>                
                     </header>
                 </a>
             </article>
-
+            
             <article class="post-card">
                 <a href="#" class="post-card-link link">
                     <figure class="card-figure"> 
@@ -56,74 +80,85 @@
                     </header>
                 </a>
             </article>
-
-            <article class="post-card">
-                <a href="#" class="post-card-link link">
-                    <figure class="card-figure">
-                        <img src="./img/Bald.jpg" alt="Bald Cypress leafs" class="card-img">
-                    </figure>
-                    <header class="card-text-wrapper">
-                        <h3 class="post-header">Bald Cypress</h3>
-                        <p class="post-describe"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident delectus animi dolores, exercitationem voluptates est eveniet.</p>                
-                    </header>
-                </a>
-            </article>
-
-            <article class="post-card">
-                <a href="#" class="post-card-link link">
-                    <figure class="card-figure">
-                        <img src="./img/Bald.jpg" alt="Bald Cypress leafs" class="card-img">
-                    </figure>
-                    <header class="card-text-wrapper">
-                        <h3 class="post-header">Bald Cypress</h3>
-                        <p class="post-describe"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident delectus animi dolores, exercitationem voluptates est eveniet.</p>                
-                    </header>
-                </a>
-            </article>
-
-            <article class="post-card">
-                <a href="#" class="post-card-link link">
-                    <figure class="card-figure">
-                        <img src="./img/Bald.jpg" alt="Bald Cypress leafs" class="card-img">
-                    </figure>
-                    <header class="card-text-wrapper">
-                       <h3 class="post-header">Bald Cypress</h3>
-                        <p class="post-describe"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident delectus animi dolores, exercitationem voluptates est eveniet.</p>                
-                    </header>
-                </a>
-            </article>
             
-            <a href="#" class="link-button link">Browse all latest &rarr;</a>
-
+            <article class="post-card">
+                <a href="#" class="post-card-link link">
+                    <figure class="card-figure">
+                        <img src="./img/Bald.jpg" alt="Bald Cypress leafs" class="card-img">
+                    </figure>
+                    <header class="card-text-wrapper">
+                        <h3 class="post-header">Bald Cypress</h3>
+                        <p class="post-describe"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident delectus animi dolores, exercitationem voluptates est eveniet.</p>                
+                    </header>
+                </a>
+            </article>
+            <div class="browse-all-link-wrapper">
+                <a href="#" class="link-button link">Browse all latest &rarr;</a>
+            </div>
+            
+            
         </section>
-
-        <section class="categories">
+        <!-- ----------------------TAGS---------------------- -->
+        <section class="tags-section">
             <h2 class="category-header">Tags</h2>
-
+            <ul class="tag-list">
+                <li class="tag-list-item"><a href="#">#News</a></li>
+                <li class="tag-list-item"><a href="#">#Culture</a></li>
+                <li class="tag-list-item"><a href="#">#Leafs</a></li>
+                <li class="tag-list-item"><a href="#">#Comparison</a></li>
+                <li class="tag-list-item"><a href="#">#Deciduous</a></li>
+                <li class="tag-list-item"><a href="#">#Evergreen</a></li>
+                <li class="tag-list-item"><a href="#">#Tropical</a></li>
+                <li class="tag-list-item"><a href="#">#Bonsai</a></li>
+                <li class="tag-list-item"><a href="#">#Broadleaf</a></li>
+                <li class="tag-list-item"><a href="#">#Needle-leaves</a></li>
+                <li class="tag-list-item"><a href="#">#Seeds</a></li>
+                <li class="tag-list-item"><a href="#">#Trunk</a></li>
+                <li class="tag-list-item"><a href="#">#Timber</a></li>
+                <li class="tag-list-item"><a href="#">#Mythology</a></li>
+                <li class="tag-list-item"><a href="#">#Botany</a></li>
+                <li class="tag-list-item"><a href="#">#History</a></li>
+                <li class="tag-list-item"><a href="#">#Forest</a></li>
+                <li class="tag-list-item"><a href="#">#Ecology</a></li>
+            </ul>
             
         </section>
+
         <!-- -------------------ABOUT ME ------------------------- -->
-        <article class="about-me">
-            <h2 class="category-header">About Me</h2>
-            <figure class="profile-figure">
-                <img src="" alt="Aron Berenyi, the Author" class="profile-img">
-            </figure>
-            <h4 class="about-me-header"> Hi there,</h4>
-            <p class="about-me-text"></p>
-        </article>
-        <!-- ------------------- SUBSCRIBE ----------------------- -->
-        <article class="subscribe">
-            <form action="" class="subscribe-form-field">
-                <input type="text" name="email" id="email" placeholder="Your email address">
-                <input type="submit" value="Subscribe">
-            </form>
-        </article>
+<!--             <article class="about-me">
+                <h2 class="category-header category-header-about">About Me</h2>
+                <div class="about-content-wrapper">
+                     <figure class="profile-figure">
+                        <img src="./img/profile_1.jpg" alt="Aron Berenyi, the author" class="profile-img">
+                    </figure>
+                   <div class="about-header-wrapper">
+                        <h4 class="about-me-header"> Hi,</h4>
+                        <p class="about-me-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt voluptas asperiores laudantium nobis odio! Consequuntur ut vel explicabo expedita eos.</p>
+                    </div>
+                </div>
+            </article> -->
+            <!-- ------------------- SUBSCRIBE ----------------------- -->
+            <article class="subscribe-wrapper" id="subscribe">
+                <h3>Get the best of tree related news instantly delivered to your address!</h3>
+                <form action="" class="subscribe-form-field">
+                    <input type="text" name="email" id="email" placeholder="Your email address" class="input-email">
+                    <input type="submit" class="submit-btn" value="Subscribe">
+                </form>
+            </article>          
 
 
     </main>
 <!------------------------------- FOOTER -------------------------------------->
+<!-- TODO: Social media -->
     <footer>
-        <h2>Footer</h2>
+        <div class="social-wrapper">
+            <ul class="social-links">
+                <li class="social-link"><a href="#" class="fa fa-facebook"></a></li>
+                <li class="social-link"><a href="https://github.com/numeroflip" class="fa fa-github"></a></li>
+                <li class="social-link"><a href="https://www.linkedin.com/in/aron-berenyi/" class="fa fa-linkedin"></a></li>
+            </ul>
+            <p class="footer-text">Site is made by Áron Berényi</p>
+        </div>
     </footer>
 </body>
 </html>
