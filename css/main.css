@@ -23,7 +23,7 @@ main {
 
 .category-header {
     z-index: 20;
-    font-size: 2.6rem;
+    font-size: 2rem;
     text-transform: uppercase;
     grid-column: 1/-1;
     justify-self: start;
@@ -235,38 +235,39 @@ main {
 }
 
 .subscribe-form-field {
-    align-self: stretch;
+    align-self: center;
     justify-self: center;
-    border-radius: 10px;
-    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .input-email {
-    display: inline-block;
-    height: 100%;
+    height: 2rem;
     border: none;
     padding: 0 1rem;
-    min-width: 15rem;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+    border-radius: 6px;
+    width: 15rem;
     box-shadow: 0 0 8px 2px rgba(75, 74, 74, 0.192);
 }
 
 .submit-btn {
     display: inline-block;
-    height: 100%;
+    height: 2rem;
     border: none;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     cursor: pointer;
-    margin-left: -5px;
     font-weight: 600;
-    padding: 0 1rem;
     transition: all .3s;
-    border-top-right-radius: 6px;
+    border-radius: 6px;
     border-bottom-right-radius: 6px;
     box-shadow: 0 0 8px 2px rgba(75, 74, 74, 0.192);
     border: 2px solid black;
+    justify-self: flex-start;
+    margin-top: 1rem;
+    width: 100px;
 
 }
 
@@ -274,3 +275,38 @@ main {
     background-color: #fff;
     color: black;
 }    
+
+@media (min-width: 400px) {
+
+    .subscribe-form-field {
+        align-self: stretch;
+        justify-self: center;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .input-email {
+        padding: 0 1rem;
+        max-width: 15rem;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+
+    .submit-btn {
+        margin-left: -5px;
+        padding: 0 1rem;
+        border-radius: 0;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        margin-top: 0;
+    
+    }
+}
+
+@media (min-width: 420px) {
+
+    .category-header {
+        font-size: 2.6rem;;
+    }
+}

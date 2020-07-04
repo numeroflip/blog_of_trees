@@ -27,6 +27,7 @@
 }
 
 .subscribe {
+    display: none;
     font-family: "Playfair Display", serif;
     padding: 0.2rem 0.7rem;
     transition: all .3s;
@@ -36,3 +37,11 @@
 .subscribe:hover {
     text-decoration: underline;
 }
+
+@media (min-width: 628px) {
+    .subscribe {
+        display: inline-block;
+    }
+}
+
+
