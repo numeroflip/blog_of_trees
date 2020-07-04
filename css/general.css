@@ -3,6 +3,20 @@
     box-sizing: border-box;
 }
 
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figure img {
+    display: block;
+}
+
+.figcaption {
+    color: rgb(68, 68, 68);
+    text-align: center;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -34,4 +48,57 @@ h5,
 h6,
 .logo {
     font-family: "Playfair Display", serif;
+    margin: 0;
+}
+/* -----------------___CATEGORY HEADER___----------------- */
+.category-header {
+    z-index: 20;
+    font-size: 2rem;
+    text-transform: uppercase;
+    grid-column: 1/-1;
+    justify-self: start;
+    align-self: center;
+    margin-bottom: -0.5rem;
+    color: rgb(183, 204, 181);
+}
+
+.category-header:before,
+.category-header:after {
+    content: "///"
+}
+
+/* -----------------___CARD___------------------------ */
+.card {
+    box-shadow: 0 0 10px 1px rgba(75, 74, 74, 0.192);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+/* ----------------___TAGS___---------------------------- */
+.tag-list {
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem;
+    display:flex;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+}
+
+.tag-list-item {
+    font-size: .8rem;
+    /* border: 1px solid rgb(85, 85, 85); */
+    border-radius: 5rem;
+    box-shadow: 0 0 8px 2px rgba(75, 74, 74, 0.192);
+    transition: all .3s;
+    margin: .5rem;
+}
+
+.tag-list-item a {
+    display: flex;
+    padding: .3rem .8rem;
+}
+
+.tag-list-item:hover {
+    background-color: rgb(56, 56, 56);
+    color: white;
 }

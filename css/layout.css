@@ -1,5 +1,6 @@
+/* MAIN GRID */
+
 body {
-    /* Layout */
     display: grid;
     margin: 0 auto;
     padding: 0 1rem;
@@ -10,4 +11,10 @@ body {
         "hr"
         "mn"
         "fr";
+        /* hr: header; mn: main; fr: footer */
+}
+
+main {
+    grid-area: mn;
+    position: relative;
 }

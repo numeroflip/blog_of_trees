@@ -2,14 +2,12 @@
 @import "./layout.css";
 @import "./header.css";
 @import "./footer.css";
+@import "./subscribe.css";
 
 
 
 /* Main */
-main {
-    grid-area: mn;
-    position: relative;
-}
+
 
 /* ----------------------POSTS---------------- */
 .post-cards-section {
@@ -21,40 +19,23 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
 
-.category-header {
-    z-index: 20;
-    font-size: 2rem;
-    text-transform: uppercase;
-    grid-column: 1/-1;
-    justify-self: start;
-    align-self: center;
-    margin-bottom: -0.5rem;
-    color: rgb(183, 204, 181);
-}
-.category-header:before,
-.category-header:after {
-    content: "///"
-}
+
 
 .post-card {
     height: 100%;
 }
 .post-card a {
     background-color: #fff;
-    box-shadow: 0 0 10px 1px rgba(75, 74, 74, 0.192);
     display: flex;
-    border-radius: 1rem;
     flex-direction: column;
     align-items: stretch;
     color: rgb(41, 41, 41);
-    min-height: 200px;
     height: 100%;
     position: relative;
-    overflow: hidden;
 
 }
 
-.post-card a:hover {
+.card:hover {
     box-shadow: 0 4px 15px 2px rgba(75, 74, 74, 0.281);
 }
 
@@ -62,10 +43,10 @@ main {
     color: white;
     content: "New";
     font-size: 1.3rem;
-    padding: .2rem 2rem;
+    padding: .4px 20px;
     background-color: rgb(211, 72, 72);
     position: absolute;
-    top: -2.3rem;
+    top: -32px;
     left: -10px;
 
 }
@@ -80,6 +61,7 @@ main {
     font-size: 1.6rem;
     position: relative;
 }
+
 
 .post-header:before {
     content: "";
@@ -103,7 +85,7 @@ main {
     width: 100%;
     margin: 0;
     position: relative;
-    height: 300px;
+    height: 250px;
 }
 
 .card-img {
@@ -173,8 +155,6 @@ main {
 .tag-list-item a {
     display: flex;
     padding: .3rem .8rem;
-
-
 }
 
 .tag-list-item:hover {
@@ -215,94 +195,6 @@ main {
     object-fit: cover;
 
 } */
-/* -------------------- SUBSCRIBE ------------------------ */
-
-.subscribe-wrapper {
-    margin-top: 6rem;
-    background-color: yellow;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 2rem;
-    box-shadow: 0 0 8px 2px rgba(75, 74, 74, 0.192);
-    border-radius: 1rem;
-}
-.subscribe-wrapper h3 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    padding: .5rem 1rem;
-    text-align: center;
-}
-
-.subscribe-form-field {
-    align-self: center;
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.input-email {
-    height: 2rem;
-    border: none;
-    padding: 0 1rem;
-    border-radius: 6px;
-    width: 15rem;
-    box-shadow: 0 0 8px 2px rgba(75, 74, 74, 0.192);
-}
-
-.submit-btn {
-    display: inline-block;
-    height: 2rem;
-    border: none;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    font-weight: 600;
-    transition: all .3s;
-    border-radius: 6px;
-    border-bottom-right-radius: 6px;
-    box-shadow: 0 0 8px 2px rgba(75, 74, 74, 0.192);
-    border: 2px solid black;
-    justify-self: flex-start;
-    margin-top: 1rem;
-    width: 100px;
-
-}
-
-.submit-btn:hover {
-    background-color: #fff;
-    color: black;
-}    
-
-@media (min-width: 400px) {
-
-    .subscribe-form-field {
-        align-self: stretch;
-        justify-self: center;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .input-email {
-        padding: 0 1rem;
-        max-width: 15rem;
-        border-top-left-radius: 6px;
-        border-bottom-left-radius: 6px;
-    }
-
-    .submit-btn {
-        margin-left: -5px;
-        padding: 0 1rem;
-        border-radius: 0;
-        border-top-right-radius: 6px;
-        border-bottom-right-radius: 6px;
-        margin-top: 0;
-    
-    }
-}
 
 @media (min-width: 420px) {
 
