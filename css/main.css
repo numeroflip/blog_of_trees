@@ -4,11 +4,6 @@
 @import "./footer.css";
 @import "./subscribe.css";
 
-
-
-/* Main */
-
-
 /* ----------------------POSTS---------------- */
 .post-cards-section {
     position: relative;
@@ -18,8 +13,6 @@
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
-
-
 
 .post-card {
     height: 100%;
@@ -32,13 +25,13 @@
     color: rgb(41, 41, 41);
     height: 100%;
     position: relative;
-
 }
 
 .card:hover {
     box-shadow: 0 4px 15px 2px rgba(75, 74, 74, 0.281);
 }
 
+/*  "NEW" label */
 .new::after {
     color: white;
     content: "New";
@@ -48,7 +41,6 @@
     position: absolute;
     top: -32px;
     left: -10px;
-
 }
 
 .card-text-wrapper {
@@ -61,7 +53,6 @@
     font-size: 1.6rem;
     position: relative;
 }
-
 
 .post-header:before {
     content: "";
@@ -77,7 +68,6 @@
 .post-card:hover .post-header:before {
     width: 20%;
 }
-
 
 .card-figure {
     display: flex;
@@ -99,9 +89,9 @@
     margin: 2rem 0 3rem 0;
     grid-column: 1/-1;
     justify-self: center;
-
 }
 
+/* "Browse all latest" button */
 .link-button {
     font-size: 1.3rem;
     font-weight: 300;
@@ -132,69 +122,6 @@
 .link-button:hover {
     color: white;
 }
-/* --------------------- TAGS --------------------------- */
-
-.tag-list {
-    margin: 0;
-    padding: 0;
-    margin-top: 2rem;
-    display:flex;
-    flex-wrap: wrap;
-    border-radius: 1rem;
-}
-
-.tag-list-item {
-    font-size: 1rem;
-    /* border: 1px solid rgb(85, 85, 85); */
-    border-radius: 5rem;
-    box-shadow: 0 0 8px 2px rgba(75, 74, 74, 0.192);
-    transition: all .3s;
-    margin: .5rem;
-}
-
-.tag-list-item a {
-    display: flex;
-    padding: .3rem .8rem;
-}
-
-.tag-list-item:hover {
-    background-color: rgb(56, 56, 56);
-    color: white;
-}
-
-/* -------------------- ABOUT ME ------------------------ */
-/* 
-.about-content-wrapper {
-    display: grid;
-    margin-top: 2rem;
-    align-items: center;
-    justify-content: flex-start;
-    box-shadow: 0 0 8px 2px rgba(75, 74, 74, 0.192);
-    border-radius: 1rem;
-    overflow: hidden;
-    grid-template-columns: 300px 1fr;
-}
-
-.about-header-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-.about-me-header {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-}
-
-.profile-figure {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.profile-img {
-    display: block;
-    object-fit: cover;
-
-} */
 
 @media (min-width: 420px) {
 

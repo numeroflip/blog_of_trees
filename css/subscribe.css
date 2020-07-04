@@ -52,7 +52,6 @@
     justify-self: flex-start;
     margin-top: 1rem;
     width: 100px;
-
 }
 
 .submit-btn:hover {
@@ -60,7 +59,6 @@
     color: black;
 }    
 
-/* Query for the Subscribe form field */
 @media (min-width: 400px) {
 
     .subscribe-form-field {
@@ -85,6 +83,5 @@
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
         margin-top: 0;
-    
     }
 }
