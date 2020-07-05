@@ -1,6 +1,7 @@
 
 body {
-    grid-template-columns: 2fr 1fr;
+    max-width: 710px;
+    grid-template-columns: 3fr 1fr;
     grid-gap: 0 4rem;
     grid-template-areas: 
     "hr hr"
@@ -14,6 +15,11 @@ body {
 .post-date,
 .author {
     color: grey;
+}
+
+.main-post {
+    max-width: 710px;
+    margin: 0 auto;
 }
 
 .main-header {
@@ -100,16 +106,13 @@ body {
     padding: 0 1rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
     body {
         grid-template-areas: 
         "hr hr"
         "mn sd"
         "fr fr";
-    }
-
-    .subscribe-form-field > input {
-        border-radius: 0px;
+        max-width: 1160px;
     }
 }
 
