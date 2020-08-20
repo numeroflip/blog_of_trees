@@ -1,6 +1,6 @@
 # Static blog site
 ## What is it?
-It's just a simple static blog site ([Click here](https://numeroflip.github.io/blog_site/) to see it),
+It's just a simple static blog site ([Click here](https://numeroflip.github.io/blog_of_trees/) to see it),
 with a homepage layout, and a blog post layout which is visible if you click on the first post on the homepage (the one with the red "new" label).
 
 ## Preview
